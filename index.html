@@ -43,7 +43,7 @@
 			<ul>
 				<!-- Dynamic (Conditional) Classes -->
 				<!-- This implies that each li item will only have the class 'fav' if book.isFav is true for it -->
-				<li v-for="book in books" :class="{ fav: book.isFav }">
+				<li v-for="book in books" :class="{ fav: book.isFav }" @click="toggleFav(book)">
 					<img :src="book.img" :alt="book.title">
 					<h3>{{ book.title }}</h3>
 					<p>{{ book.author }}</p>
